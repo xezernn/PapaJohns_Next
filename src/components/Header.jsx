@@ -47,18 +47,18 @@ function Header() {
                 <div className="container">
                     <div id='redBar'>
                         <Link href="/" id='redLogo'>
-                            <Image src={logo} alt="logo" />
+                            <Image priority src={logo} alt="logo" />
                         </Link>
                         <ul id='menuList'>
-                            <li><Link href="#">Kampaniyalar</Link></li>
-                            <li><Link href="#">Papadias</Link></li>
-                            <li className="active"><Link href="#">Pizza</Link></li>
-                            <li><Link href="#">Qəlyanaltı</Link></li>
-                            <li><Link href="#">Salat</Link></li>
-                            <li><Link href="#">Pasta</Link></li>
-                            <li><Link href="#">İçki</Link></li>
-                            <li><Link href="#">Desert</Link></li>
-                            <li><Link href="#">Sous</Link></li>
+                            <li><Link href="/kompaniyalar">Kampaniyalar</Link></li>
+                            <li><Link href="/menu/Papadias">Papadias</Link></li>
+                            <li className="active"><Link href="/menu/Pizzalar">Pizza</Link></li>
+                            <li><Link href="/menu/qelyanaltilar">Qəlyanaltı</Link></li>
+                            <li><Link href="/menu/Salatlar">Salat</Link></li>
+                            <li><Link href="/menu/Pastalar">Pasta</Link></li>
+                            <li><Link href="/menu/ickiler">İçki</Link></li>
+                            <li><Link href="/menu/Desserts">Desert</Link></li>
+                            <li><Link href="/menu/Souslar ">Sous</Link></li>
                         </ul>
                         <span id='bal'>
                             0 Bal

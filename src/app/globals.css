@@ -134,13 +134,15 @@ main {
   max-width: 100%;
 }
 
-#selectMenu a {
+#selectMenu span {
+  transition: .5s;
   color: #000;
   font-size: 1em;
   font-weight: bold;
+  cursor: pointer;
 }
 
-#selectMenu a:hover {
+#selectMenu span:hover {
   color: #AD0F14;
 }
 
@@ -469,7 +471,7 @@ footer {
   color: #8D94AD;
 }
 
-.sliderH3 h3 {
+.sliderH3 div {
   height: 50vh;
   color: #fff;
   text-align: center;
@@ -600,6 +602,15 @@ h2 {
 .umumiMebleg{
   color: #AD0F14;
 }
+
+.callToAction{
+  height: 45vh;
+  flex-direction: column;
+  gap: 20px ;
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+}
 @media only screen and (min-width: 500px) {
 
   .card {
@@ -654,6 +665,7 @@ h2 {
 
   .productFlex1 {
       display: flex;
+      align-items: center;
       gap: 20px;
   }
 
@@ -850,7 +862,6 @@ h2 {
   }
 
   .productFlex1 {
-      display: flex;
       width: 100%;
   }
 
