@@ -1,6 +1,5 @@
-import KompaniyaCard from './src/components/Main/Kampaniyalar/KompaniyaCard'
 import React from 'react'
- 
+
 function page() {
   let data = [
     {
@@ -73,8 +72,19 @@ function page() {
         <div className='kompaniyaCards'>
           {
             data.map(item => (
-                <KompaniyaCard key={item.id} {...item} /> 
-              ))
+              <div className="kompaniyaCard">
+                <div className="komCardTop">
+                  <img src={item.img} alt="sekil yoxdur" />
+                </div>
+                <div className="stocItem">
+                  {item.compasition}
+                </div>
+                <div className="komCardBottom">
+                  <button className='btn'>ƏTRAFLI MƏLUMAT</button>
+                </div>
+              </div>
+              // <KompaniyaCard key={item.id} {...item} /> 
+            ))
           }
         </div>
       </div>
