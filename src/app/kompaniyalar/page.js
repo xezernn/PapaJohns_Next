@@ -1,6 +1,6 @@
 import KompaniyaCard from '@/components/Main/Kampaniyalar/KompaniyaCard'
 import React from 'react'
-
+ 
 function page() {
   let data = [
     {
