@@ -1,4 +1,4 @@
-import KompaniyaCard from '@/components/Main/Kampaniyalar/KompaniyaCard'
+import KompaniyaCard from './src/components/Main/Kampaniyalar/KompaniyaCard'
 import React from 'react'
  
 function page() {
