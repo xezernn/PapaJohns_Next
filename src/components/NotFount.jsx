@@ -10,7 +10,7 @@ function NotFount() {
         <section className='callToAction'>
             <h3>Çox heyif ki, axtarış etdiyiniz kateqoriya üzrə nəticə yoxdur 🥲</h3>
             <div className='promoInp'>
-                <button onClick={() => router.push("/menu/Pizzalar")} >Əsas səhifəyə keçit etmək üçün klikləyin!</button>
+                <button onClick={() => router.push("/menu/Pizzalar", true)} >Əsas səhifəyə keçit etmək üçün klikləyin!</button>
             </div>
 
         </section>

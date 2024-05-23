@@ -67,6 +67,132 @@ function Header() {
                     </div>
                 </div>
             </div>
+
+            <div className='sebetBlur'>
+            </div   >
+            <div className="sebet">
+
+                <h2>Səbətiniz</h2>
+
+                <div className='sebetElements'>
+                    <div className='sebetItem'>
+                        <div className="iconsClose">
+                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"></path></svg>
+                        </div>
+                        <div className='sebetImg'>
+                            <img src="https://www.papajohns.az/uploads/images/Papadias/Dabl-cheddar-%C3%A7%C4%B0zburger-Papad%C4%B0as-yeni-sayt.png" alt="" />
+                        </div>
+                        <div className='sebetText'>
+                            <div className='sebetName'>
+                                <h4>Dabl Cheddar Çizburger Papadias</h4>
+                                <p>Dabl Çeddar Çizburger Papadias</p>
+                            </div>
+
+                            <div className='sebetSelect'>
+                                <button>+</button>
+                                <span>0</span>
+                                <button>-</button>
+                            </div>
+                            <div >
+                                9₼
+                            </div>
+                        </div>
+                    </div>
+                    <div className='sebetItem'>
+                        <div className="iconsClose">
+                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"></path></svg>
+                        </div>
+                        <div className='sebetImg'>
+                            <img src="https://www.papajohns.az/uploads/images/Papadias/Dabl-cheddar-%C3%A7%C4%B0zburger-Papad%C4%B0as-yeni-sayt.png" alt="" />
+                        </div>
+                        <div className='sebetText'>
+                            <div className='sebetName'>
+                                <h4>Dabl Cheddar Çizburger Papadias</h4>
+                                <p>Dabl Çeddar Çizburger Papadias</p>
+                            </div>
+
+                            <div className='sebetSelect'>
+                                <button>+</button>
+                                <span>0</span>
+                                <button>-</button>
+                            </div>
+                            <div >
+                                9₼
+                            </div>
+                        </div>
+                    </div>
+                    <div className='sebetItem'>
+                        <div className="iconsClose">
+                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"></path></svg>
+                        </div>
+                        <div className='sebetImg'>
+                            <img src="https://www.papajohns.az/uploads/images/Papadias/Dabl-cheddar-%C3%A7%C4%B0zburger-Papad%C4%B0as-yeni-sayt.png" alt="" />
+                        </div>
+                        <div className='sebetText'>
+                            <div className='sebetName'>
+                                <h4>Dabl Cheddar Çizburger Papadias</h4>
+                                <p>Dabl Çeddar Çizburger Papadias</p>
+                            </div>
+
+                            <div className='sebetSelect'>
+                                <button>+</button>
+                                <span>0</span>
+                                <button>-</button>
+                            </div>
+                            <div >
+                                9₼
+                            </div>
+                        </div>
+                    </div>
+                    <div className='sebetItem'>
+                        <div className="iconsClose">
+                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"></path></svg>
+                        </div>
+                        <div className='sebetImg'>
+                            <img src="https://www.papajohns.az/uploads/images/Papadias/Dabl-cheddar-%C3%A7%C4%B0zburger-Papad%C4%B0as-yeni-sayt.png" alt="" />
+                        </div>
+                        <div className='sebetText'>
+                            <div className='sebetName'>
+                                <h4>Dabl Cheddar Çizburger Papadias</h4>
+                                <p>Dabl Çeddar Çizburger Papadias</p>
+                            </div>
+
+                            <div className='sebetSelect'>
+                                <button>+</button>
+                                <span>0</span>
+                                <button>-</button>
+                            </div>
+                            <div >
+                                9₼
+                            </div>
+                        </div>
+                    </div>
+                    <div className='sebetItem'>
+                        <div className="iconsClose">
+                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"></path></svg>
+                        </div>
+                        <div className='sebetImg'>
+                            <img src="https://www.papajohns.az/uploads/images/Papadias/Dabl-cheddar-%C3%A7%C4%B0zburger-Papad%C4%B0as-yeni-sayt.png" alt="" />
+                        </div>
+                        <div className='sebetText'>
+                            <div className='sebetName'>
+                                <h4>Dabl Cheddar Çizburger Papadias</h4>
+                                <p>Dabl Çeddar Çizburger Papadias</p>
+                            </div>
+
+                            <div className='sebetSelect'>
+                                <button>+</button>
+                                <span>0</span>
+                                <button>-</button>
+                            </div>
+                            <div >
+                                9₼
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </header>
     )
 }

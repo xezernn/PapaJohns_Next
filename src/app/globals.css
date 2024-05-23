@@ -11,6 +11,13 @@
   overflow-x: hidden !important;
 }
 
+header {
+  position: relative;
+}
+body{
+  overflow-x: hidden;
+}
+
 .bgSilver {
   background-color: #F1F1F1;
 }
@@ -259,8 +266,119 @@ main {
   border-radius: 4px;
 }
 
+.sebetBlur{
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  height: calc(100vh - 160px);
+  /* height: calc(100vh - 150px); */
+  background-color: #00000038;
+  z-index: 998;
+}
+
 .sebet {
-  /* background-color: #AD0F14; */
+  background-color: white;
+  max-width: 600px;
+  width: 100%;
+  max-height: calc(100vh - 150px);
+  position: absolute;
+  top: 100%;
+  overflow: scroll;
+  transition: right .5s;
+  right: 00%;
+  z-index: 999;
+  padding: 20px;
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.sebet::-webkit-scrollbar{
+  display: none;
+}
+
+.sebetElements{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sebetItem {
+  position: relative;
+  display: flex;
+  background-color: #eee;
+  height: 150px;
+  border-radius: 10px;
+  border: 1px solid #0F9675;
+  overflow: hidden;
+}
+
+.sebetImg {
+  width: 30%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.sebetText {
+  width: 70%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+
+  div:last-child {
+    font-size: 25px;
+  }
+}
+
+.sebetName {
+  max-width: 150px;
+
+  p {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #575757;
+  }
+}
+
+.sebetSelect {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+
+  button {
+    color: white;
+    border: 0;
+    border-radius: 20%;
+    width: 30px;
+    font-weight: 500;
+    height: 30px;
+    font-size: 26px;
+    background-color: #0F9675;
+  }
+}
+
+.iconsClose {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+}
+
+/* .sebet {
   padding: 40px 0;
   width: 100%;
   height: 100vh;
@@ -270,8 +388,7 @@ main {
   right: 0;
   position: absolute;
   transition: 1.1s;
-  /* transform: translateX(100%); */
-}
+} */
 
 
 .items {
@@ -283,7 +400,7 @@ main {
   width: 0px;
 }
 
-.sebetItem {
+/* .sebetItem {
   height: 120px;
   display: flex;
   background-color: #EeE;
@@ -310,7 +427,7 @@ main {
   border-radius: 10px;
   font-size: 20px;
   border: 0;
-}
+} */
 
 .listLeft {
   width: 30%;
@@ -598,315 +715,365 @@ h2 {
   background: #0F9675;
 }
 
-.textDesk{display: none;}
-.umumiMebleg{
+.textDesk {
+  display: none;
+}
+
+.umumiMebleg {
   color: #AD0F14;
 }
 
-.callToAction{
+.callToAction {
   height: 45vh;
   flex-direction: column;
-  gap: 20px ;
+  gap: 20px;
   display: flex;
   align-items: center;
-  justify-content: center ;
+  justify-content: center;
 }
+
+.mainSlider {
+  width: 100%;
+  height: 500px;
+}
+
+.mainSlider .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.sliderImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sliderImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.img2 {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  background-color: #0F9675 !important;
+}
+
 @media only screen and (min-width: 500px) {
 
   .card {
-      width: calc(50% - 15px);
+    width: calc(50% - 15px);
   }
 
   .cards {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .kompaniyaCards {
-      flex-direction: row;
-      gap: 15px;
+    flex-direction: row;
+    gap: 15px;
   }
 
   .kompaniyaCard {
-      width: calc(50% - 15px);
-      height: max-content;
-      padding: 0;
+    width: calc(50% - 15px);
+    height: max-content;
+    padding: 0;
   }
-  .listRight{flex-direction: row;}
-  
+
+  .listRight {
+    flex-direction: row;
+  }
+
 }
 
 @media only screen and (min-width: 768px) {
-  .textDesk{display: block;}
-  .textMobil{display: none;}
+  .textDesk {
+    display: block;
+  }
 
-  #menuList{justify-content: center;}
+  .textMobil {
+    display: none;
+  }
+
   #menuList {
-      margin-left: 0;
+    justify-content: center;
+  }
+
+  #menuList {
+    margin-left: 0;
   }
 
   .card {
-      width: calc(33% - 15px);
+    width: calc(33% - 15px);
   }
 
   .cards {
-      flex-direction: row;
-      flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .caruselDnone {
-      display: none
+    display: none
   }
 
   .coruselDesk {
-      display: block;
+    display: block;
   }
 
   .productFlex1 {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-  }
-
-  .sebet {
-      width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
   .notFound {
-      width: 70%;
-      margin: auto;
+    width: 70%;
+    margin: auto;
   }
 
   #menuList li {
-      margin: 0;
+    margin: 0;
+  }
+
+  .sebet{
+    min-width: 600px;
+    width: 60%;
+  }
+
+  .sebetBlur{
+    top: 160px !important;
   }
 
 }
 
 @media only screen and (min-width: 998px) {
   .container {
-      width: 93.5%;
+    width: 93.5%;
   }
 
   .topMenu {
-      display: block;
+    display: block;
   }
 
   .topMenu ul {
-      display: flex;
-      gap: 15px;
+    display: flex;
+    gap: 15px;
   }
 
   .topMenu ul a {
-      color: #000;
-      font-size: 21px;
-      font-weight: bold;
+    color: #000;
+    font-size: 21px;
+    font-weight: bold;
   }
 
   .headerTop {
-      padding-left: 210px;
-      height: 69px;
+    padding-left: 210px;
+    height: 69px;
   }
 
   .flexCol {
-      display: flex;
-      flex-direction: column !important;
+    display: flex;
+    flex-direction: column !important;
   }
 
   .headerTop #logo {
-      display: none;
+    display: none;
   }
 
   .headerLogin {
-      width: 43%;
+    width: 43%;
   }
 
   #redBar {
-      display: flex;
-      justify-content: space-between;
-      padding: 0;
-      align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
   }
 
   .headerIcon {
-      flex-direction: row;
+    flex-direction: row;
   }
 
   #redLogo {
-      min-width: 200px;
-      width: 270px;
-      display: block;
+    min-width: 200px;
+    width: 270px;
+    display: block;
   }
 
   #redLogo img {
-      margin-top: -30px;
-      width: 100%;
-      height: 100%;
+    margin-top: -30px;
+    width: 100%;
+    height: 100%;
   }
 
   #menuList {
-      margin-left: 0;
-      justify-content: start;
-      gap: 20px;
-      flex-wrap: wrap;
+    margin-left: 0;
+    justify-content: start;
+    gap: 20px;
+    flex-wrap: wrap;
 
   }
 
   #menuList a {
-      font-size: 1.4em
+    font-size: 1.4em
   }
 
   #menuList li {
-      position: relative;
+    position: relative;
 
   }
 
   .d-none {
-      display: none;
+    display: none;
   }
 
   #menuList li::before {
-      content: "";
-      position: absolute;
-      bottom: 0px;
-      background-color: white;
-      height: 3px;
-      width: 0;
-      transition: 1s;
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    transition: 1s;
   }
 
   #menuList li:hover::before {
-      width: 100%;
+    width: 100%;
   }
 
   #selectMenu a {
-      font-size: 1.2em;
+    font-size: 1.2em;
   }
 
   .card {
-      width: calc(25% - 15px);
+    width: calc(25% - 15px);
   }
 
   .cardBottom {
-      padding: 10px;
+    padding: 10px;
   }
 
   .cards {
-      flex-direction: row;
-      flex-wrap: wrap;
-      text-align: left;
-      justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: center;
   }
 
   #bal {
-      display: block;
-      color: white;
-      font-size: 1.4em;
-      font-weight: bold;
+    display: block;
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
   }
 
   .promo h2 {
-      display: block;
+    display: block;
   }
 
-  .sebet {
-      /* margin-top: -20px; */
-      /* background-color: red; */
-      width: 40%;
-      height: 100vh;
-  }
 
   footer {
-      padding: 13px 0;
-      overflow: hidden;
+    padding: 13px 0;
+    overflow: hidden;
   }
 
   #footerMenu {
-      flex-direction: row;
-      width: max-content;
+    flex-direction: row;
+    width: max-content;
   }
 
   .footerright {
-      display: none !important
+    display: none !important
   }
 
   .footerLeft {
-      display: flex;
-      flex-direction: row !important;
+    display: flex;
+    flex-direction: row !important;
   }
 
   footer .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .footerBottom {
-      margin: initial;
-      display: flex;
-      gap: 40px;
-      align-items: center;
+    margin: initial;
+    display: flex;
+    gap: 40px;
+    align-items: center;
   }
 
   .socialIcons {
-      margin-top: 9px;
+    margin-top: 9px;
   }
 
   .copy {
-      display: none;
+    display: none;
   }
 
   #copyElement {
-      display: block !important;
+    display: block !important;
   }
 
   .productFlex1 {
-      width: 100%;
+    width: 100%;
   }
 
   .productTopBar {
-      padding: 20px 0;
-      font-size: 20px;
+    padding: 20px 0;
+    font-size: 20px;
   }
 
   .productLeft {
-      width: 50%;
+    width: 50%;
   }
 
   .coruselDesk {
-      display: block;
-      width: 100%;
+    display: block;
+    width: 100%;
   }
 
   .coruselDesk img {
-      width: 90%;
-      height: 100%;
+    width: 90%;
+    height: 100%;
   }
 
   .productRight {
-      margin-top: 10px;
-      padding: 20px 15px;
-      height: max-content;
-      width: 350px;
-      background-color: #e7e9f1;
-      border-radius: 15px;
+    margin-top: 10px;
+    padding: 20px 15px;
+    height: max-content;
+    width: 350px;
+    background-color: #e7e9f1;
+    border-radius: 15px;
   }
 
   .notFound {
-      padding: 0;
+    padding: 0;
   }
 
   .kompaniyaCards {
-      padding: 20px 0;
-      flex-direction: row;
-      gap: 15px;
+    padding: 20px 0;
+    flex-direction: row;
+    gap: 15px;
   }
 
   .kompaniyaCard {
-      width: calc(25% - 15px);
-      height: max-content;
-      padding: 0;
+    width: calc(25% - 15px);
+    height: max-content;
+    padding: 0;
   }
 
-} 
+  .img1 {
+    display: none;
+  }
+
+  .img2 {
+    display: block;
+  }
+}
