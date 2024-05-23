@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import KompaniyaCard from './src/components/Main/Kampaniyalar/KompaniyaCard'
+=======
+import KompaniyaCard from '.src/components/Main/Kampaniyalar/KompaniyaCard'
+>>>>>>> 13faaf29861f52c68d1f865a24d80df179eed821
 import React from 'react'
  
 function page() {
