@@ -1,5 +1,3 @@
-import React from 'react'
-
 function page() {
   let data = [
     {
@@ -83,7 +81,6 @@ function page() {
                   <button className='btn'>ƏTRAFLI MƏLUMAT</button>
                 </div>
               </div>
-              // <KompaniyaCard key={item.id} {...item} /> 
             ))
           }
         </div>
