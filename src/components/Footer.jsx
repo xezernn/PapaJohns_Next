@@ -33,13 +33,13 @@ function Footer() {
                     <div className="socialIcons">
                         <ul id='socialMenu'>
                             <li>
-                                <a href="https://www.facebook.com/papajohns.az/"><FaFacebookF /></a>
+                                <Link href="https://www.facebook.com/papajohns.az/"><FaFacebookF /></Link>
                             </li>
                             <li>
-                                <a href="https://twitter.com/azpapajohns"><FaTwitter /></a>
+                                <Link href="https://twitter.com/azpapajohns"><FaTwitter /></Link>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/azpapajohns/"><FaInstagram /></a>
+                                <Link href="https://www.instagram.com/azpapajohns/"><FaInstagram /></Link>
                             </li>
                             <li>
                                 <Link href=""><FaTripadvisor /></Link>
@@ -47,9 +47,7 @@ function Footer() {
                         </ul>
                     </div>
                     <div id='copyElement'>
-                        <div className='copy'>
-                            © PJA 2023
-                        </div>
+                        <div className='copy'>PJA 2023</div>
                     </div>
                 </div>
 
