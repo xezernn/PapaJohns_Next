@@ -1,15 +1,15 @@
 import ProductDetails from "@/components/Main/ProductDetails"
+import { getElementById } from "@/services/services"
 
 async function page({ params }) {
     const id = params.id
-    const res = await fetch(`https://papaapi.yetim.me/food/${id}`)
-    const data = await res.json()
+    const data = await getElementById(id)
 
     return (
         <>
-            <ProductDetails {...data}  />
+            <ProductDetails {...data} />
         </>
     )
 }
- 
+
 export default page

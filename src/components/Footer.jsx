@@ -2,8 +2,7 @@
 
 import Link from 'next/link'
 import React from 'react'
-import { FaFacebookF, FaInstagram, FaTripadvisor, FaTwittet } from 'react-icons/fa'
-
+import { FaFacebookF, FaInstagram, FaTripadvisor, FaTwitter } from 'react-icons/fa'
 function Footer() {
     return (
         <footer>
@@ -33,18 +32,18 @@ function Footer() {
                     </div>
                     <div className="socialIcons">
                         <ul id='socialMenu'>
-                            {/* <li>
+                            <li>
                                 <a href="https://www.facebook.com/papajohns.az/"><FaFacebookF /></a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/azpapajohns"><FaTwittet /></a>
+                                <a href="https://twitter.com/azpapajohns"><FaTwitter /></a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/azpapajohns/"><FaInstagram /></a>
                             </li>
                             <li>
                                 <Link href=""><FaTripadvisor /></Link>
-                            </li> */}
+                            </li>
                         </ul>
                     </div>
                     <div id='copyElement'>

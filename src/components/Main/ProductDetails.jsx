@@ -20,12 +20,7 @@ function ProductDetails({ img, price, name, category, composition }) {
         <>
             <div className="productTopBar">
                 <ul id='productMenu'>
-                    <li><span onClick={() =>
-                        router.push({
-                            pathname: `/menu/${category}`,
-                        }, undefined, { scroll: true })
-
-                    } >{category}</span></li>
+                    <li><span onClick={() => router.push(`/menu/${category}`)} >{category}</span></li>
                 <li><span>{name}</span></li>
 
             </ul>

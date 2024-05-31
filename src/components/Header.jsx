@@ -1,19 +1,20 @@
-import React from 'react'
+"use client"
+import React, { useContext, useEffect, useState } from 'react'
 import Image from 'next/image'
 import { FaQuestion, FaUser } from "react-icons/fa";
-import { RiShoppingBasket2Fill } from "react-icons/ri";
 import Link from 'next/link';
 import logo from '@/assets/img/logo.png';
+import { Basket } from '@/Context/BasketContext';
+import { Toaster } from 'react-hot-toast';
 
 function Header() {
-    const say = ""
+    const { isOpen, setIsOpen, addBasket, setAddBasket ,price , delBasket, handleCount, sifarisiGonder } = useContext(Basket)  
 
     return (
         <header>
             <div className='container'>
                 <div className="headerTop">
                     <Link href="/" id='logo'>
-                        {/* <Image src={logo} alt="logo" /> */}
                         <img src='https://www.papajohns.az/img/content/pj_logo_web_new.png' alt="logo" />
                     </Link>
                     <div className='topMenu'>
@@ -33,9 +34,12 @@ function Header() {
                             <p className='textMobil'>Giriş</p>
                             <p className='textDesk'>Giriş / Qeydiyyat</p>
                         </div>
-                        <div className='headerIcon flexCol'>
-                            <RiShoppingBasket2Fill className='icon' />
-                            <p>{say.toString().length > 4 ? say.toFixed(2) : say}₼</p>
+                        <div className='headerIcon flexCol' onClick={() => setIsOpen(!isOpen)}>
+                            <div className="icosSup">
+                                <span style={{ display: addBasket.length && "flex" }}>{addBasket.length}</span>
+                                <img className='icon' src="https://icons.veryicon.com/png/o/application/font-awesome/shopping-basket-19.png" alt="icons" />
+                            </div>
+                            <p>{price.toString().length > 4 ? price.toFixed(2) : price}₼</p>
                         </div>
                     </div>
                 </div>
@@ -68,132 +72,72 @@ function Header() {
                 </div>
             </div>
 
-            <div className='sebetBlur'>
-            </div   >
-            <div className="sebet">
+            <div className='sebetBlur'
+                onClick={() => setIsOpen(!isOpen)}
+                style={{
+                    opacity: isOpen ? "1" : "0",
+                    visibility: isOpen ? "visible" : "hidden"
+                }}
+            >
+            </div>
+
+            <div className="sebet"
+                style={{
+                    right: isOpen ? "0%" : "-100%"
+                }}>
 
                 <h2>Səbətiniz</h2>
 
                 <div className='sebetElements'>
-                    <div className='sebetItem'>
-                        <div className="iconsClose">
-                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"></path></svg>
-                        </div>
-                        <div className='sebetImg'>
-                            <img src="https://www.papajohns.az/uploads/images/Papadias/Dabl-cheddar-%C3%A7%C4%B0zburger-Papad%C4%B0as-yeni-sayt.png" alt="" />
-                        </div>
-                        <div className='sebetText'>
-                            <div className='sebetName'>
-                                <h4>Dabl Cheddar Çizburger Papadias</h4>
-                                <p>Dabl Çeddar Çizburger Papadias</p>
-                            </div>
+                    {
+                        addBasket?.map((item, i) => (
+                            <div key={item.id} className='sebetItem'>
+                                <div onClick={() => delBasket(item.id)} className="iconsClose">
+                                    <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"></path></svg>
+                                </div>
+                                <div className='sebetImg'>
+                                    <img src={item.img} alt="" />
+                                </div>
+                                <div className='sebetText'>
+                                    <div className='sebetJustify'>
+                                        <div className='sebetName'>
+                                            <h4>{item.name}</h4>
+                                            <p>{item.name}</p>
+                                        </div>
 
-                            <div className='sebetSelect'>
-                                <button>+</button>
-                                <span>0</span>
-                                <button>-</button>
+                                        <div className='sebetSelect'>
+                                            <button onClick={() => handleCount(1, i)}>+</button>
+                                            <span>{item.count}</span>
+                                            <button onClick={() => handleCount(-1, i)} > -</button>
+                                        </div>
+                                    </div>
+                                    <div className='sebetPrice' >
+                                        {item.price}₼
+                                    </div>
+                                </div>
                             </div>
-                            <div >
-                                9₼
-                            </div>
-                        </div>
-                    </div>
-                    <div className='sebetItem'>
-                        <div className="iconsClose">
-                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"></path></svg>
-                        </div>
-                        <div className='sebetImg'>
-                            <img src="https://www.papajohns.az/uploads/images/Papadias/Dabl-cheddar-%C3%A7%C4%B0zburger-Papad%C4%B0as-yeni-sayt.png" alt="" />
-                        </div>
-                        <div className='sebetText'>
-                            <div className='sebetName'>
-                                <h4>Dabl Cheddar Çizburger Papadias</h4>
-                                <p>Dabl Çeddar Çizburger Papadias</p>
-                            </div>
-
-                            <div className='sebetSelect'>
-                                <button>+</button>
-                                <span>0</span>
-                                <button>-</button>
-                            </div>
-                            <div >
-                                9₼
-                            </div>
-                        </div>
-                    </div>
-                    <div className='sebetItem'>
-                        <div className="iconsClose">
-                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"></path></svg>
-                        </div>
-                        <div className='sebetImg'>
-                            <img src="https://www.papajohns.az/uploads/images/Papadias/Dabl-cheddar-%C3%A7%C4%B0zburger-Papad%C4%B0as-yeni-sayt.png" alt="" />
-                        </div>
-                        <div className='sebetText'>
-                            <div className='sebetName'>
-                                <h4>Dabl Cheddar Çizburger Papadias</h4>
-                                <p>Dabl Çeddar Çizburger Papadias</p>
-                            </div>
-
-                            <div className='sebetSelect'>
-                                <button>+</button>
-                                <span>0</span>
-                                <button>-</button>
-                            </div>
-                            <div >
-                                9₼
-                            </div>
-                        </div>
-                    </div>
-                    <div className='sebetItem'>
-                        <div className="iconsClose">
-                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"></path></svg>
-                        </div>
-                        <div className='sebetImg'>
-                            <img src="https://www.papajohns.az/uploads/images/Papadias/Dabl-cheddar-%C3%A7%C4%B0zburger-Papad%C4%B0as-yeni-sayt.png" alt="" />
-                        </div>
-                        <div className='sebetText'>
-                            <div className='sebetName'>
-                                <h4>Dabl Cheddar Çizburger Papadias</h4>
-                                <p>Dabl Çeddar Çizburger Papadias</p>
-                            </div>
-
-                            <div className='sebetSelect'>
-                                <button>+</button>
-                                <span>0</span>
-                                <button>-</button>
-                            </div>
-                            <div >
-                                9₼
-                            </div>
-                        </div>
-                    </div>
-                    <div className='sebetItem'>
-                        <div className="iconsClose">
-                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z"></path></svg>
-                        </div>
-                        <div className='sebetImg'>
-                            <img src="https://www.papajohns.az/uploads/images/Papadias/Dabl-cheddar-%C3%A7%C4%B0zburger-Papad%C4%B0as-yeni-sayt.png" alt="" />
-                        </div>
-                        <div className='sebetText'>
-                            <div className='sebetName'>
-                                <h4>Dabl Cheddar Çizburger Papadias</h4>
-                                <p>Dabl Çeddar Çizburger Papadias</p>
-                            </div>
-
-                            <div className='sebetSelect'>
-                                <button>+</button>
-                                <span>0</span>
-                                <button>-</button>
-                            </div>
-                            <div >
-                                9₼
-                            </div>
-                        </div>
+                        ))
+                    }
+                </div>
+                <div
+                    style={{
+                        right: isOpen ? "0%" : "-100%"
+                    }}
+                    className='sebetBottom'>
+                    <h6>
+                        Ümumi məbləğ: {price}₼
+                    </h6>
+                    <div>
+                        <button onClick={() => setAddBasket([])}>Sebeti silin</button>
+                        <button onClick={sifarisiGonder}>Sebeti tamamla</button>
                     </div>
                 </div>
             </div>
-
-        </header>
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
+        </header >
     )
 }
 
