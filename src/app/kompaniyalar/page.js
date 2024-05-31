@@ -70,7 +70,7 @@ function page() {
         <div className='kompaniyaCards'>
           {
             data.map(item => (
-              <div className="kompaniyaCard">
+              <div key={item.id} className="kompaniyaCard">
                 <div className="komCardTop">
                   <img src={item.img} alt="sekil yoxdur" />
                 </div>
