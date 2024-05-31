@@ -20,10 +20,8 @@ export default function RootLayout({ children }) {
         <BasketContext>
           <Header />
           <PromoCompenent />
-          <main>
-            <div className="container">
-              {children}
-            </div>
+          <main>       
+              {children}           
           </main>
           <Footer />
         </BasketContext>
